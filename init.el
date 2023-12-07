@@ -33,7 +33,6 @@
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 
-
 ;;;;;;;;;;;;;
 ;; History ;;
 ;;;;;;;;;;;;;
@@ -69,5 +68,11 @@
   :ensure t
   :defer t
   :init
-  (with-eval-after-load 'winum
-    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window)))
+  :bind
+  (:map global-map
+	("C-c c" . treemacs)
+	("M-0" . treemacs-select-window))
+  :config
+  (progn
+    (setq treemacs-is-never-other-window t)
+    (setq show-hidden-files t)))
