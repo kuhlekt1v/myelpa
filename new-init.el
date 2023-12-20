@@ -56,10 +56,16 @@
 (use-package treemacs-all-the-icons)
 (treemacs-load-theme "all-the-icons")
 
-(use-package vscode-dark-plus-theme
+;(use-package vscode-dark-plus-theme
+;  :ensure t
+;  :config
+;  (load-theme 'vscode-dark-plus t))
+
+(use-package spacemacs-theme
   :ensure t
   :config
-  (load-theme 'vscode-dark-plus t))
+  (load-theme 'spacemacs-dark t))
+
 
 (setq inhibit-start-message t        ; Hide start screen.
       inhibit-splash-screen t        ; Hide splash.
@@ -223,7 +229,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(evil-nerd-commenter yasnippet which-key web-mode vscode-dark-plus-theme typescript-mode treemacs-all-the-icons tree-sitter-langs tide smartparens rainbow-delimiters prettier-js lsp-ui lsp-ivy ligature json-mode helm expand-region exec-path-from-shell eslintd-fix company-box alect-themes)))
+   '(spacemacs-theme evil-nerd-commenter yasnippet which-key web-mode vscode-dark-plus-theme typescript-mode treemacs-all-the-icons tree-sitter-langs tide smartparens rainbow-delimiters prettier-js lsp-ui lsp-ivy ligature json-mode helm expand-region exec-path-from-shell eslintd-fix company-box alect-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
